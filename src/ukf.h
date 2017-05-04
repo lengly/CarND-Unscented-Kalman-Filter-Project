@@ -108,6 +108,10 @@ public:
    * @param meas_package The measurement at k+1
    */
   void UpdateRadar(MeasurementPackage meas_package);
+
+  MatrixXd GenerateAugSigPoint();
+  void PredictAugSigPoint(MatrixXd Xsig_aug, double delta_t);
+  void PredictNewState();
 };
 
 #endif /* UKF_H */
